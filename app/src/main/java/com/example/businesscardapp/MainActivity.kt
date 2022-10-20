@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.expandHorizontally
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.DragInteraction
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.verticalScroll
@@ -77,12 +78,12 @@ fun BlockInfo(info:String, Micon: ImageVector){
         .fillMaxWidth()
         .wrapContentWidth(Alignment.Start).padding(bottom = 10.dp)) {
         Icon(imageVector = Micon, contentDescription = null, modifier = Modifier
-           .fillMaxWidth(0.16f)
-           .fillMaxSize(0.16f)
-            .padding(start = 20.dp), Color(0, 191, 89));
+            .width(50.dp)
+           .size(50.dp)
+            .padding(start = 25.dp), Color(0, 191, 89));
         Text(text = info, fontSize = 26.sp, modifier = Modifier
             .fillMaxWidth()
-            .padding(start=10.dp)
+            .padding(start=25.dp, top = 7.dp)
             , textAlign = TextAlign.Justify, color = Color.White)
 
 
